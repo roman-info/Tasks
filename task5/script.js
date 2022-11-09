@@ -1,8 +1,14 @@
- document.querySelector('button').addEventListener('click', myClick);
+let form = document.querySelector ('#form');
+let textInput = document.querySelector('#textInput');
+let text = document.querySelector('#duplicateField');
 
-function myClick(){
-	let textContent = document.querySelector('input').value;
-	console.log(textContent);
-	document.getElementById('duplicateField').innerHTML = textContent;
-}
+textInput.addEventListener('keypress', (event)=> {
+	text.textContent = text.textContent + event.key;
+})
 
+form.addEventListener('submit', (event)=>{
+	event.preventDefault();
+	console.log(text.textContent);
+	text.textContent = '';
+	form.reset();
+})
