@@ -16,6 +16,11 @@ main {
 	box-shadow: 1px 1px 1px 1px #000;
 }
 
+button {
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+	font-weight: 700;
+}
+
 button:hover {
 	background-color: rgba(206, 255, 133, 0.814);
 }
